@@ -1,4 +1,4 @@
-from core.model import *
+from model import *
 
 
 def main():
