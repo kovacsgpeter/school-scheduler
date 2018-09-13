@@ -8,7 +8,8 @@ class day(Enum):
     pentek=5
 
 class slot:
-    def __init__(self, day, hour, activity):
+
+    def __init__(self, day=None, hour=None, activity=None):
         self.__day = day
         self.__hour = hour
         self.activity = activity
