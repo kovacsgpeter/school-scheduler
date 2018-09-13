@@ -23,12 +23,16 @@ class init_service:
 
 
         def create_entity():
-            for i in range(len(temp_act_list)):
-                self.slot_list[0][i].activity = temp_act_list[i]
+            counter = daily_slots*day_num-1
+            for d in range(day_num):
+                for h in range(daily_slots):
+                    self.slot_list[d][h].activity = temp_act_list[counter]
+                    counter -= 1
+
             return self.slot_list
 
         for i in range(pop_num):
-            self.population.append(create_day())
+            self.population.append(create_entity())
 
 
 
